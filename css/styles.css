@@ -1,0 +1,123 @@
+/* reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* variáveis css */
+:root {
+ --color-light: #f4f4f4;
+ --color-orange: #ff6600;
+}
+
+
+/* como fazer o site rolar a tela */
+  html { 
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+}
+/* formatações para elementos que sempre se repetem */
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+a:hover {
+    color: var(--color-orange);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* hero da página (dvh - aplica o tamanho do dispositivo) */
+.hero {
+    color: var(--color-light);
+    height: 100dvh;  
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8),rgba(0, 0, 0, .3)),
+    url(../images/motos/banner.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+}
+
+.header-hero {
+    height: 100px;
+    background-color:violet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+}
+.hero-menu {
+    /* display muda secção, block e flex */
+    display: flex;
+    gap: 20px;
+    /* gap coloca espaçamento entre elementos e não nas extremidades */
+}
+
+.cta { 
+   height: calc(100dvh - 100px);
+   text-align: center;
+   display: flex;
+   flex-direction:column;
+       align-items: center;
+       justify-content: center;
+       gap: 30px;
+
+}
+.cta h2 {
+    /* vw valor de acordo com a largura(vmax) vh valor de acordo com a altura(vmin) */
+    font-size: 10vmin;
+}
+.cta p {
+    width: 50%;
+    font-size: 3vmin;
+    font-weight: 500;
+    line-height: 1.6;
+    /* propriedade que alinha as linhas para terem mesma quant. de palavras nas linhas */
+    text-wrap: balance;
+
+}
+.btn {
+    border: 2px solid var(--color-orange);
+    border-radius: 20px;
+    background-color: var(--color-orange);
+    padding: 5px 10px;
+    
+}
+
+.btn:hover {
+    background-color: transparent;
+    transition: .5s; 
+    
+}
+
+.setinha {
+    animation: arrow 2s infinite linear;
+}
+/* animação da seta do caption */
+@keyframes arrow {
+    0%,
+    100% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+
+
+
+.motos, .conheca, .galeria {
+    height: 100dvh;
+    
+}
