@@ -8,12 +8,17 @@
 :root {
  --color-light: #f4f4f4;
  --color-orange: #ff6600;
+ --color-dark: #111111;
+ --spacing-sm: 10px;
+ --spacing-md: 20px;
+ --spacing-lg: 30px;
 }
 
 
 /* como fazer o site rolar a tela */
   html { 
     scroll-behavior: smooth;
+    background-color: var(--color-dark);
 }
 
 body {
@@ -25,6 +30,7 @@ a {
     text-decoration: none;
     font-weight: 700;
     font-size: 18px;
+    
 
 }
 
@@ -50,16 +56,15 @@ background-position: center;
 
 .header-hero {
     height: 100px;
-    background-color:violet;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 20px;
+    padding-inline: var(--spacing-md);
 }
 .hero-menu {
     /* display muda secção, block e flex */
     display: flex;
-    gap: 20px;
+    gap: var(--spacing-md);
     /* gap coloca espaçamento entre elementos e não nas extremidades */
 }
 
@@ -70,7 +75,7 @@ background-position: center;
    flex-direction:column;
        align-items: center;
        justify-content: center;
-       gap: 30px;
+       gap: var(--spacing-lg);
 
 }
 .cta h2 {
@@ -90,7 +95,7 @@ background-position: center;
     border: 2px solid var(--color-orange);
     border-radius: 20px;
     background-color: var(--color-orange);
-    padding: 5px 10px;
+    padding: var(--spacing-sm) var(--spacing-lg);
     
 }
 
@@ -114,10 +119,40 @@ background-position: center;
     }
 }
 
+.motos {
+    height:100dvh;
+    width: 90%;
+    padding: var(--spacing-md);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    margin: var(--spacing-sm) auto;
+}
+
+.grid-motos {
+    width: 100%;
+
+}
+
+.moto-item {
+    width: 30%;
+
+}
+
+.moto-item img {
+    width: 100%;
+
+}
+
+.motos h2 {
+    font-size: 8vmin;
+}
+
+.color-orange {
+    color: var(--color-orange);
+}
 
 
-
-.motos, .conheca, .galeria {
+.conheca, .galeria {
     height: 100dvh;
     
 }
