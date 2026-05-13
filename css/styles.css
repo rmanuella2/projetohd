@@ -9,7 +9,8 @@
  --color-light: #f4f4f4;
  --color-orange: #ff6600;
  --color-orange-alpha: rgba(255, 102, 0, .15);
- --color-dark: #111111;
+ --color-dark: #111;
+ --color-black: #000;
  --spacing-sm: 10px;
  --spacing-md: 20px;
  --spacing-lg: 30px;
@@ -206,9 +207,66 @@ background-attachment: fixed;
     }
 
 }
+.galeria {
+    min-height: 100dvh;
+    color: var(--color-light);
+    width: 95%;
+    margin: auto;
+}
+.galeria h2 {
+    font-size: 8vmin;
+    padding-block: var(--spacing-md);
 
 
-.conheca, .galeria {
-    height: 100dvh;
+}
+.galeria-grid {
+    columns: 3 300px;
+    width: 95%;
+}
+
+.galeria-grid img {
+    width: 100%;
+    display: block;
+    margin: var(--spacing-md);
+    border-radius: 8px;
+    border: 1px solid var(--color-light);
+    filter: grayscale(1);
+    transition: .5s;
+    position: relative;
     
 }
+.galeria-grid img:hover {
+    filter: grayscale(0);
+    scale: 1.05;
+    z-index: 1;
+}
+
+.contato  {
+    height: 300px;
+    background-color: var(--color-black);
+    margin-top: var(--spacing-lg);
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-inline: var(--spacing-lg);
+
+    h4 {
+        font-size: 3vmin;
+    }
+    
+    .icons {
+        display: flex;
+        gap: var(--spacing-md);
+
+        i {
+            color: var(--color-dark);
+
+            &:hover {
+                color: var(--color-orange);
+            }
+        }
+    
+    }
+}
+
